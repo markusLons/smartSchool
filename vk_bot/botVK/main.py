@@ -1,6 +1,6 @@
 import time
 import vk_api
-
+import pymysql
 vk = vk_api.VkApi(token='398d932966e344fc5a42f40c0856ab8dfd915efe6ffe919b83ccc3ac7d99351f73afcfda8c3051627a02e')
 
 param = {
@@ -93,6 +93,8 @@ while True:
             from teacher import *
         if  users[my_id] == "student":
             from student import *
+        if users[my_id] == "admin":
+            from admin import *
     req = False
     reg = True
 
